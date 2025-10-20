@@ -45,7 +45,7 @@ class _ExpressionValidator(ast.NodeVisitor):
         if not isinstance(node.value, (int, float)):
             raise ValueError("Only numeric constants are allowed")
 
-    def visit_Num(self, node: ast.Num) -> None:  # pragma: no cover
+    def visit_Num(self, node: ast.Num) -> None:
         if not isinstance(node.n, (int, float)):
             raise ValueError("Only numeric constants are allowed")
 
